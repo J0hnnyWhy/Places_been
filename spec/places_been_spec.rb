@@ -2,6 +2,10 @@ require('rspec')
 require('places_been')
 
 describe(PlacesBeen) do
+  before() do
+    PlacesBeen.clear()
+  end
+
   describe("#description") do
     it("lets you enter places you've been.") do
       test_places = PlacesBeen.new("VooDoo Donuts")
@@ -30,8 +34,4 @@ end
       expect(PlacesBeen.all()).to(eq([]))
     end
   end
-
-
-
-
 end
