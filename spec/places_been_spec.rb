@@ -15,4 +15,13 @@ describe(PlacesBeen) do
   end
 end
 
+  describe("#save") do
+    it("adds a location to the array of saved") do
+      test_task = PlacesBeen.new("VooDoo Donuts")
+      test_task.save()
+      expect(PlacesBeen.all()).to(eq([test_task]))
+    end  
+  end
+
+
 end
