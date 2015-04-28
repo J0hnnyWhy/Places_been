@@ -8,4 +8,11 @@ describe(PlacesBeen) do
       expect(test_places.description()).to(eq("VooDoo Donuts"))
     end
   end
+
+  describe(".all") do
+    it ("is empty at first") do
+    expect(PlacesBeen.all()).to(eq([]))
+  end
+end
+
 end
