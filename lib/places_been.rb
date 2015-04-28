@@ -16,4 +16,7 @@ class PlacesBeen
     @@places.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@places =[]
+  end
 end

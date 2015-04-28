@@ -20,8 +20,18 @@ end
       test_task = PlacesBeen.new("VooDoo Donuts")
       test_task.save()
       expect(PlacesBeen.all()).to(eq([test_task]))
-    end  
+    end
   end
+
+  describe(".clear") do
+    it("empties out all of the saved locations") do
+      PlacesBeen.new("VooDoo Donuts").save()
+      PlacesBeen.clear()
+      expect(PlacesBeen.all()).to(eq([]))
+    end
+  end
+
+
 
 
 end
